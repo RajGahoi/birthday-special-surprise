@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fff5f9">
+<title>A surprise for you 💖</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,500&family=Great+Vibes&family=Kalam:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" id="themecss" href="style-dark.css">
+</head>
+<body class="locked">
+<div id="gate"><div class="gin"><p id="gate-top"></p><button id="open" aria-label="Open"><span>♥</span></button><p class="tap">tap the heart to begin</p></div></div>
+<div id="stickers"></div>
+<canvas id="fx"></canvas>
+<button id="music-btn" hidden aria-label="Music"><span class="eq"><i></i><i></i><i></i><i></i></span></button>
+
+<header class="hero" id="hero">
+  <div class="hero-bg" id="hero-bg"></div><div class="hero-vid" id="hero-vid"></div><div class="lights" id="lights"></div><div class="hero-shade"></div>
+  <div class="hero-inner">
+  <div class="hero-photo"><div class="ph-ring"></div><img id="hero-img" alt="Priyanshi"></div>
+  <div class="hero-text">
+    <p class="eyebrow">a little surprise for my behn</p>
+    <h1 id="hero-title" class="name"></h1>
+    <p class="hb">HAPPY&nbsp;&nbsp;BIRTHDAY</p>
+    <p id="nick" class="nick"></p>
+    <div id="cd" class="cd"></div>
+    <p id="age" class="age"></p>
+  </div>
+  </div>
+  <div class="scroll"><i></i></div>
+  <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,44 C240,92 480,2 720,44 C960,84 1200,10 1440,44 L1440,80 L0,80Z" fill="#fff5f9"/></svg>
+</header>
+<div class="ribbon"><div id="rib"></div></div>
+
+<main>
+  <section class="quote"><p id="quote"></p></section>
+
+  <section class="narrow"><div class="hd reveal"><small>chapter one</small><h2 id="letter-title"></h2></div><div class="paper" id="letter"></div></section>
+
+  <section><div class="hd reveal"><small>chapter two</small><h2 id="story-title"></h2></div><div class="first reveal"><small id="fm-label"></small><div class="b me" id="fm-text"></div><div class="fm-note" id="fm-note"></div></div><div id="story" class="story"></div></section>
+
+  <section class="reveal center"><div class="hd"><small>and counting</small><h2 id="met-title"></h2></div><div class="metc" id="metc"></div><p class="cap-sub" id="met-sub"></p></section>
+
+  <section class="reveal center"><div class="hd"><small>not by blood, by choice</small><h2 id="bond-title"></h2></div><div class="bond"><div class="orb a" id="orbA"></div><svg viewBox="0 0 160 50" class="thread"><path d="M2 25 Q 40 -5 80 25 T 158 25"/><text x="80" y="30" text-anchor="middle">♥</text></svg><div class="orb b" id="orbB"></div></div><p class="cap-sub" id="bond-sub"></p></section>
+
+  <section><div class="hd reveal"><small>hanging on a string of lights</small><h2 id="hang-title"></h2></div><div class="hang" id="hang"></div></section>
+
+  <section><div class="hd reveal"><small>chapter three</small><h2 id="nick-title"></h2></div><div id="nicks" class="nicks"></div></section>
+
+  <section class="reveal"><div class="hd"><small>chapter four</small><h2 id="ht-title"></h2></div><div class="hrt" id="hrt"></div><p class="cap-sub" id="ht-sub"></p></section>
+
+  <section class="reveal center"><div class="hd"><small>dedicated to you</small><h2 id="song-title"></h2></div><div class="vinyl" id="vinyl"><div class="disc"><i>♥</i></div></div><p class="cap-sub" id="song-line"></p><button class="btn" id="song-btn">▶ Play</button></section>
+
+  <section><div class="hd reveal"><small>chapter five</small><h2 id="chat-title"></h2></div><div class="chat reveal"><div class="chead"><b id="chat-name"></b><small>Telegram · where it all began</small></div><div class="cbody" id="cbody"></div></div></section>
+
+  <section><div class="hd reveal"><small>chapter six</small><h2 id="reasons-title"></h2></div><div id="reasons" class="reasons"></div></section>
+
+  <section class="center"><div class="hd reveal"><small>destiny says</small><h2 id="cards-title"></h2></div><div class="cards" id="cards"></div><p class="hint" id="cards-hint"></p></section>
+
+  <section><div class="hd reveal"><small>chapter seven</small><h2 id="ow-title"></h2></div><div id="ow" class="ow"></div></section>
+
+  <section class="reveal center"><div class="hd"><small>sweet nothings</small><h2 id="jar-title"></h2></div><button class="btn" id="jarbtn"></button><p id="jar-out" class="jout"></p></section>
+
+  <section><div class="hd reveal"><small>chapter eight</small><h2 id="gal-title"></h2><p id="gal-sub"></p></div><div class="masonry" id="gallery"></div></section>
+
+  <section class="narrow"><div class="hd reveal"><small>chapter nine</small><h2 id="pr-title"></h2></div><ol id="promises" class="promises"></ol></section>
+
+  <section><div class="hd reveal"><small>twenty little blessings</small><h2 id="w20-title"></h2></div><div class="w20" id="w20"></div></section>
+
+  <section class="reveal center"><div class="hd"><small>feel this</small><h2 id="hb-title"></h2></div><button id="hbtn" class="hbtn" aria-label="Hold">♥</button><p class="hint" id="hb-hint"></p><p class="jout" id="hb-msg"></p></section>
+
+  <section class="reveal center"><div class="hd"><small>warmest wishes</small><h2 id="hug-title"></h2></div><button class="btn" id="hugbtn"></button><div id="hug" class="hug"><div class="hugi">🫂</div><p id="hug-msg"></p></div></section>
+
+  <section class="reveal center"><div class="hd"><small>and still</small><h2 id="lm-title"></h2></div><div class="meter"><div class="mbar"><i id="mfill"></i></div><p id="mval">0%</p></div></section>
+
+  <section class="reveal center"><div class="hd"><small>a garden for you</small><h2 id="bq-title"></h2></div><div class="bq" id="bq"></div><button class="btn" id="bqbtn"></button></section>
+
+  <section class="reveal center"><div class="hd"><small>a secret</small><h2 id="sc-title"></h2></div><div class="scr"><div class="under" id="sc-text"></div><canvas id="scratch" width="340" height="190"></canvas></div><p class="hint" id="sc-hint"></p></section>
+
+  <section class="reveal center"><div class="hd"><small>sealed with love</small><h2 id="cp-title"></h2></div><div class="cap" id="cap">🔒</div><p class="jout" id="cp-out"></p></section>
+
+  <section class="reveal center wish">
+    <div class="hd"><small>the last chapter</small><h2 id="wish-title"></h2></div>
+    <button id="candle" aria-label="Blow the candle"><svg viewBox="0 0 200 210" width="210"><ellipse cx="100" cy="190" rx="92" ry="12" fill="#f0d9f7"/><rect x="28" y="130" width="144" height="58" rx="14" fill="#ff8fb1"/><rect x="46" y="86" width="108" height="48" rx="12" fill="#ffe9f0"/><path d="M28 144q12 16 24 0t24 0 24 0 24 0 24 0 24 0v-6H28z" fill="#fff"/><rect x="95" y="52" width="10" height="36" rx="3" fill="#f6d7a0"/><g id="flame"><ellipse cx="100" cy="40" rx="9" ry="16" fill="#ffd166"/><ellipse cx="100" cy="44" rx="4.5" ry="9" fill="#ff8a5c"/></g></svg></button>
+    <p class="hint" id="wish-hint"></p>
+    <div class="lnrow"><input id="ln-in" maxlength="60"><button class="btn" id="ln-btn"></button></div>
+    <p class="wish-msg" id="wish-msg"></p>
+    <button class="btn ghost" id="rainbtn"></button>
+  </section>
+
+  <section class="finale reveal"><div class="bigheart">♥</div><h2 id="finale"></h2><p id="finale-sub"></p><p class="bless" id="bless"></p><p class="ps" id="ps"></p></section>
+</main>
+<footer id="footer"></footer>
+
+<div id="lightbox" hidden><button id="lb-close" aria-label="Close">×</button><button class="lb-nav l" id="lb-prev">‹</button><img id="lb-img" alt=""><button class="lb-nav r" id="lb-next">›</button></div>
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
