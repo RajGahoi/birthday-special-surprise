@@ -102,7 +102,7 @@ window.BDAY = {
   scratchTitle: "A Secret Just For You",
   scratchHint: "scratch the card with your finger",
   scratchText: "You are not just a friend I found online. You are family I found by luck. 💗",
-  capTitle: "A Letter For Your 22nd Birthday",
+  capTitle: "A Special Letter In The Time Capsule",
   capLocked: "Sealed with love. Come back and open it on",
   capMsg: "Dear future Priyanshi, I hope this year was kinder than the last, and I hope you still smile exactly like this. I am so proud of you, behn. 💌",
   wishTitle: "Make A Wish",

@@ -149,9 +149,16 @@ new IntersectionObserver((es, o) => { if (!es[0].isIntersecting) return; o.disco
 $("bq-title").textContent = C.bqTitle; $("bqbtn").textContent = C.bqBtn; let bn = 0;
 $("bqbtn").onclick = () => { if (bn >= 21) return; bn++; $("bq").append(el("span", "", C.flowers[bn % C.flowers.length])); const r = $("bqbtn").getBoundingClientRect(); burst(r.left + r.width/2, r.top - 20); if (bn === 21) { $("bqbtn").textContent = C.bqDone; $("bqbtn").style.pointerEvents = "none"; } };
 // time capsule
-$("cp-title").textContent = C.capTitle; const od = new Date(b.getFullYear() + 22, b.getMonth(), b.getDate());
-$("cap").onclick = () => { if (new Date() >= od) { $("cap").textContent = "💌"; $("cp-out").textContent = C.capMsg; burst(innerWidth/2, innerHeight/2); }
-  else { $("cap").classList.remove("shake"); void $("cap").offsetWidth; $("cap").classList.add("shake"); $("cp-out").textContent = `${C.capLocked} ${od.toLocaleDateString("en-IN", {day:"numeric", month:"long", year:"numeric"})} 🤍`; } };
+$("cp-title").textContent = C.capTitle;
+let capOpened = false;
+$("cap").onclick = () => {
+  if (!capOpened) {
+    capOpened = true;
+    $("cap").textContent = "💌";
+    $("cp-out").textContent = C.capMsg;
+    burst(innerWidth/2, innerHeight/2);
+  }
+};
 
 // finale
 $("finale").textContent = C.finale; $("finale-sub").textContent = C.finaleSub; $("bless").textContent = C.bless; $("ps").textContent = C.ps; $("footer").textContent = C.footer;
