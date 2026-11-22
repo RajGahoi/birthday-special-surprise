@@ -11,7 +11,20 @@
 <link rel="stylesheet" id="themecss" href="style-dark.css">
 </head>
 <body class="locked">
-<div id="gate"><div class="gin"><p id="gate-top"></p><button id="open" aria-label="Open"><span>♥</span></button><p class="tap">tap the heart to begin</p></div></div>
+<div id="gate">
+  <div class="gin">
+    <p id="gate-top"></p>
+    <div id="pw-box" style="margin: 1.5rem auto; max-width: 320px; display: flex; flex-direction: column; gap: 0.8rem; align-items: center;">
+      <input type="password" id="pw-input" placeholder="Enter Secret Code..." style="width: 100%; padding: 0.75rem 1.2rem; border-radius: 25px; border: 1px solid rgba(255,255,255,0.4); background: rgba(255,255,255,0.12); color: #fff; font-size: 1rem; text-align: center; outline: none; backdrop-filter: blur(10px); font-family: inherit;">
+      <button id="pw-submit" style="padding: 0.55rem 1.8rem; border-radius: 20px; border: none; background: linear-gradient(135deg, #ff8fb1, #a98bff); color: #fff; font-weight: 600; cursor: pointer; font-size: 0.95rem; box-shadow: 0 4px 15px rgba(255,143,177,0.4);">Unlock ✨</button>
+      <p id="pw-err" style="color: #ff6b8b; font-size: 0.85rem; min-height: 1.2em; margin: 0;"></p>
+    </div>
+    <div id="unlocked-gate" style="display: none;">
+      <button id="open" aria-label="Open"><span>♥</span></button>
+      <p class="tap">tap the heart to begin</p>
+    </div>
+  </div>
+</div>
 <div id="stickers"></div>
 <canvas id="fx"></canvas>
 <button id="music-btn" hidden aria-label="Music"><span class="eq"><i></i><i></i><i></i><i></i></span></button>

@@ -1,5 +1,6 @@
 // ===== EDIT ONLY THIS FILE =====
 window.BDAY = {
+  password: "priyu", // password to unlock the surprise
   name: "Priyanshi",
   brother: "Raj",
   birth: "2005-12-01T00:00:00",

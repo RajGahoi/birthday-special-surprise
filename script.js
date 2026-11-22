@@ -245,6 +245,37 @@ function makeSynth(startStyle = 0) {
 let audio = null, opened = false;
 function useSynth() { audio = makeSynth(); audio.onplay = audio.onpause = syncV; if (opened) audio.play(); }
 if (C.music) { audio = new Audio(C.music); audio.loop = true; audio.onplay = audio.onpause = syncV; audio.onerror = useSynth; } else useSynth();
+// Password protection
+const pwBox = $("pw-box"), pwInput = $("pw-input"), pwSubmit = $("pw-submit"), pwErr = $("pw-err"), unlockedGate = $("unlocked-gate");
+function checkPassword() {
+  const reqPass = (C.password || "").trim().toLowerCase();
+  if (!reqPass) {
+    if (pwBox) pwBox.style.display = "none";
+    if (unlockedGate) unlockedGate.style.display = "block";
+    return;
+  }
+  const entered = (pwInput ? pwInput.value : "").trim().toLowerCase();
+  if (entered === reqPass) {
+    if (pwBox) pwBox.style.display = "none";
+    if (unlockedGate) {
+      unlockedGate.style.display = "block";
+      burst(innerWidth/2, innerHeight/2);
+    }
+  } else {
+    if (pwErr) pwErr.textContent = "Oops! Incorrect secret code 🔒";
+    if (pwInput) {
+      pwInput.style.borderColor = "#ff4f86";
+      setTimeout(() => { if (pwInput) pwInput.style.borderColor = "rgba(255,255,255,0.4)"; }, 1500);
+    }
+  }
+}
+if (pwSubmit) pwSubmit.onclick = checkPassword;
+if (pwInput) pwInput.onkeydown = e => { if (e.key === "Enter") checkPassword(); };
+if (!C.password) {
+  if (pwBox) pwBox.style.display = "none";
+  if (unlockedGate) unlockedGate.style.display = "block";
+}
+
 $("open").onclick = () => {
   opened = true; $("gate").classList.add("gone"); document.body.classList.remove("locked"); scrollTo(0, 0); burst(innerWidth/2, innerHeight/2);
   if (vid) vid.play().catch(() => {});
